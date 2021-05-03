@@ -25,14 +25,9 @@ class Greet extends PluginCommand {
         }
         switch ($args[0] ?? "greet") {
             case "greet":
-                if (!$sender->hasPermission("greet.separatedcmds")) {
-                    $sender->sendMessage("Use this command in-game.");
-                    return true; //Cancels the command if does not have permission.
-                } else {
                     //What the command does here.
                     $name = $sender->getName();
                     $sender->sendMessage(TextFormat::BLUE . "Hello $name!");
-                }
         }
         return true;
     }
