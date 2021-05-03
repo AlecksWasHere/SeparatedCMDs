@@ -21,11 +21,13 @@ class Greet extends PluginCommand {
         }
         if (!$sender instanceof Player) {
             $sender->sendMessage("Please run the command in-game.");
+            return true; //Cancels the command if console sends it.
         }
         switch ($args[0] ?? "greet") {
             case "greet":
                 if (!$sender->hasPermission("greet.separatedcmds")) {
                     $sender->sendMessage("Use this command in-game.");
+                    return true; //Cancels the command if does not have permission.
                 } else {
                     //What the command does here.
                     $name = $sender->getName();
