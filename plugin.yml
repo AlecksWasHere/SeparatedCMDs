@@ -1,6 +1,6 @@
 ---
 name: SeparatedCMDs
-version: 0.0.1
+version: 0.0.2
 main: Atlqs\SeparatedCMDs\SeparatedCMDs
-api: 3.19.0
+api: 4.0.0
 ...
