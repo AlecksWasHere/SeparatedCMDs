@@ -8,7 +8,7 @@ use Atlqs\SeparatedCMDs\Commands\Greet;
 use pocketmine\plugin\PluginBase;
 
 class SeparatedCMDs extends PluginBase {
-    public function onEnable() {
+    public function onEnable(): void {
         $this->getServer()->getCommandMap()->register("greet", new Greet($this));
     }
 }
